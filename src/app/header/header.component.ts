@@ -13,4 +13,8 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+  changeTitle(event: MouseEvent){
+    console.log(event);
+    this.title = "kent web";
+  };
 }
