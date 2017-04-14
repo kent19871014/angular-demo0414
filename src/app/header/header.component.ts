@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   title = "The Will Will Web"; 
+  is_h3_highlight = false;
   constructor() { }
 
   ngOnInit() {
@@ -16,5 +17,9 @@ export class HeaderComponent implements OnInit {
   changeTitle(event: MouseEvent){
     console.log(event);
     this.title = "kent web";
+  };
+
+  getStyle(){
+    return {background: "yellow"};
   };
 }
