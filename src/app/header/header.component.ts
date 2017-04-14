@@ -9,17 +9,19 @@ export class HeaderComponent implements OnInit {
 
   title = "The Will Will Web"; 
   is_h3_highlight = false;
+  counter = 0;
   constructor() { }
 
   ngOnInit() {
   }
 
   changeTitle(event: MouseEvent){
+    this.counter++;
     console.log(event);
     this.title = "kent web";
   };
 
   getStyle(){
-    return {background: "yellow"};
+    return "yellow";
   };
 }
