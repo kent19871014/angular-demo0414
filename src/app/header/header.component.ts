@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -10,6 +10,8 @@ export class HeaderComponent implements OnInit {
   title = "The Will Will Web"; 
   is_h3_highlight = false;
   counter = 0;
+  @Output()
+  titleChanged = new EventEmitter();
   
   constructor() { }
 
@@ -20,6 +22,8 @@ export class HeaderComponent implements OnInit {
     this.counter++;
     console.log(event);
     this.title = "kent web";
+
+    this.titleChanged.emit(this.title);
   };
 
   getStyle(){
