@@ -13,7 +13,7 @@
               <a href="{{item.href}}">{{item.title}}</a>
             </h2>
             <div class="post-info clearfix">
-              <span class="post-date"><i class="glyphicon glyphicon-calendar"></i>{{item.date | date}}</span>
+              <span class="post-date"><i class="glyphicon glyphicon-calendar"></i>{{item.date | date: 'dd/MM/yyyy'}}</span>
               <span class="post-author"><i class="glyphicon glyphicon-user"></i><a href="http://blog.miniasp.com/author/will.aspx">{{item.author | mask: 3}}</a></span>
               <span class="post-category"><i class="glyphicon glyphicon-folder-close"></i><a href="{{item['category-link']}}">{{item.category}}</a></span>
             </div>
